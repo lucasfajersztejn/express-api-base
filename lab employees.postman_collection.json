@@ -1,0 +1,242 @@
+{
+	"info": {
+		"_postman_id": "5110fce1-5332-492f-a79d-d4547fbab763",
+		"name": "lab employees",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33903124"
+	},
+	"item": [
+		{
+			"name": "employees",
+			"item": [
+				{
+					"name": "1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/employees",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"employees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/employees?page=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"employees"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/employees?page=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"employees"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "4",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "5",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/employees/oldest",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"employees",
+								"oldest"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "6",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/employees?user=true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"employees"
+							],
+							"query": [
+								{
+									"key": "user",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "7",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Julio\",\r\n    \"age\": 32,\r\n    \"phone\": {\r\n      \"personal\": \"555-123-123\",\r\n      \"work\": \"555-456-456\",\r\n      \"ext\": \"2342\"\r\n    },\r\n    \"privileges\": \"admin\",\r\n    \"favorites\": {\r\n      \"artist\": \"Dave Ghrol\",\r\n      \"food\": \"Gazpacho\"\r\n    },\r\n    \"finished\": [\r\n      20,\r\n      5\r\n    ],\r\n    \"badges\": [\r\n      \"black\",\r\n      \"red\"\r\n    ],\r\n    \"points\": [\r\n      {\r\n        \"points\": 100,\r\n        \"bonus\": 30\r\n      },\r\n      {\r\n        \"points\": 200,\r\n        \"bonus\": 20\r\n      }\r\n    ]\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/employees",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"employees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/employees?badges=black",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"employees"
+							],
+							"query": [
+								{
+									"key": "badges",
+									"value": "black"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Julio\",\r\n    \"age\": 32,\r\n    \"phone\": {\r\n      \"personal\": \"555-123-123\",\r\n      \"work\": \"555-456-456\",\r\n      \"ext\": \"2342\"\r\n    },\r\n    \"privileges\": \"admin\",\r\n    \"favorites\": {\r\n      \"artist\": \"Dave Ghrol\",\r\n      \"food\": \"Gazpacho\"\r\n    },\r\n    \"finished\": [\r\n      20,\r\n      5\r\n    ],\r\n    \"badges\": [\r\n      \"black\",\r\n      \"red\"\r\n    ],\r\n    \"points\": [\r\n      {\r\n        \"points\": 100,\r\n        \"bonus\": 30\r\n      },\r\n      {\r\n        \"points\": 200,\r\n        \"bonus\": 20\r\n      }\r\n    ]\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/employees/sUe",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"employees",
+								"sUe"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
